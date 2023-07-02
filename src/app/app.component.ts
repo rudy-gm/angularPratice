@@ -66,6 +66,7 @@ const student = new Student('Rudy', "Gutierrez", 21, ["Angular"]);
 student.enroll("React"); 
 
 console.log(student); 
+console.log('testing git'); 
 
 
 
