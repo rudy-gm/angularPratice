@@ -10,7 +10,7 @@ export class ServersComponent {
 
   allowNewServer = false; 
   serverCreation = false;
-  serverName = ''; 
+  serverName = `I'm fine thanks`; 
 
   constructor(){
     setTimeout((()=>{
