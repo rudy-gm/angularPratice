@@ -9,10 +9,15 @@ import { Component } from '@angular/core';
 export class ServersComponent {
 
   allowNewServer = false; 
+  serverCreation = false;
 
   constructor(){
     setTimeout((()=>{
       this.allowNewServer = true; 
-    }),2000)
+    }),2000) 
+  }
+
+  onServerCreation(){
+    this.serverCreation = !this.serverCreation; 
   }
 }
