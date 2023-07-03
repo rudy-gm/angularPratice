@@ -13,14 +13,30 @@
     [(ngModel)]="serverName"
 >
 
-<p>{{serverName}}</p>
-
+<!-- <p>{{serverName}}</p> -->
+ 
 <button 
 class="btn btn-primary" 
 [disabled]="!allowNewServer"
 (click)="onServerCreation()"
->{{serverCreation ? "Remove Server" : "Add Server"}}</button>
+>{{serverCreation !== "No server was created"? "Remove Server" : "Add Server"}}</button>
 <!-- <p [innerText]="allowNewServer"></p> -->
-<p>{{serverCreation ? "Server was created" : "No server was created"}}</p>
+<p>{{serverCreation}}</p>
 <app-server></app-server>
-<app-server></app-server>
+<hr>
+
+<label>Username</label>
+<input 
+    type="text"
+    class="form-control"
+    [(ngModel)]="userName"
+>
+
+<p>{{userName}}</p>
+<button 
+    class="btn btn-primary" 
+    (click)="deleteInput()"
+    [disabled]="!userName"
+    
+    >Erase Input</button>
+
