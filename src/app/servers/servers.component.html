@@ -22,8 +22,7 @@ class="btn btn-primary"
 <ng-template #noServer>
     <p>No server was created</p>
 </ng-template>
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
 <hr>
 
 <label>Username</label>
@@ -40,4 +39,30 @@ class="btn btn-primary"
     [disabled]="!userName"
     
     >Erase Input pls</button>
+
+<hr>
+
+<button 
+    class="btn btn-primary"
+    (click)="showAndHide()"    
+    >
+    Display Details
+</button>
+
+<p *ngIf="isShowing">Pintamos toda la casa sin dejar una sola gota de...</p>
+
+<p>
+    Counter: {{numbers}}
+</p>
+
+<p 
+    *ngFor="let number of numbers; let i = index"
+    [ngStyle]="{background: i >= 4 ? 'blue' : 'white'}"
+    [ngClass]="{whiteColorCondition: i >= 4}"
+    >
+    click: {{number}}
+</p>
+
+
+
 
